@@ -1,0 +1,201 @@
+*  {
+    margin: 0px;
+    margin: 0px;
+    box-sizing:   border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+}
+#header {
+    margin: 2rem;
+    text-align: center;
+    h6 {
+        color: white;
+    }
+    h3 {
+        color: lightgray;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    ul {
+    
+        list-style-type: none;
+        margin: 2rem;
+        margin-left: 0px !important;
+        li {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            color: white;
+            font-size: 1 rem;
+        }
+        
+        a {
+            position:relative;
+            #iconoCarro {
+                font-size: 1.5rem;
+                
+                
+            }
+            #carrito {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 350px;
+            height: 300px;
+            z-index: 1;
+            display:none;
+            position:absolute;
+            left: 1rem;
+            background-color: lightblue;
+            overflow: auto;
+            h4{
+                margin-top: 1rem;
+                color: black;
+            }
+            p{
+                color: black;
+            }
+            }
+            .items {
+                padding: 1rem;
+                .cantidadCarro {
+                    font-size: 1rem;
+                    width: 3rem;
+                    
+                 }
+            }
+            
+            #botonesCarrito {
+                position:sticky;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-bottom: 1rem;
+            
+            }
+            
+        
+        }
+    
+    }
+    
+}
+body {
+    
+    background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/fondito1.jpg");
+    background-size:cover;
+    main {
+        img {
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            
+        }
+        #eleccion {
+            #formReserva{
+                text-align: center;
+                color: white;
+                margin: 1rem 0;
+               
+            }
+        }
+        #resultado {
+            p {
+                color: white;
+                text-align: center;
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+            h3 {
+                color: white;
+                text-align: center;
+            }
+            
+            
+        }
+        #opiniones {
+            .divOpinion {
+                margin: 2rem;
+                width: 40%;
+                .card-header {
+                    background-color: none;
+                }
+                h5 {
+                    font-weight: bold;
+                }
+                p{
+                    color:black;
+                    font-size: 1.5rem;
+                }
+                
+            }
+            #btnEnviarOpinion {
+                
+                width: 25%;
+            }
+            h4 {
+                color: white;
+                text-align: center;
+                font-size: 2rem;
+            }
+            #formOpinion {
+                
+                color: white;
+                .form-control {
+                    width: 40%;
+                    margin-bottom: 1rem;
+                }
+                .form-floating{
+                    label {
+                        color: gray;
+                    }
+                }
+            }
+        }
+        #servicios {
+            .row{
+                text-align: center;
+                color: white;
+                h4 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                a{
+                    text-decoration: none;
+                    display: inline;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    
+    }
+    
+    
+    footer{
+        text-align: center;
+        padding: 2rem;
+        h4  {
+            font-size: 1rem;
+            color:white
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    
+    .btn {
+        vertical-align:baseline !important;
+    }
+
+}
+

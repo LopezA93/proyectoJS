@@ -1,0 +1,41 @@
+[
+    {
+        "nombre":"Julian Lopez",
+        "calificacion": "Excelente",
+        "comentario": "Muy buena atencion, super recomendable!",
+        "tiempo": "Hace 1 semana"
+    },
+    {
+        "nombre":"Shaira Navarro",
+        "calificacion": "Muy bueno",
+        "comentario": "Festeje mi cumpleaños ahí, y la pase super bien!",
+        "tiempo": "Hace 2 semanas"
+    },
+    {
+        "nombre":"Carlos Zarate",
+        "calificacion": "Excelente",
+        "comentario": "El mejor bar de Córdoba, por lejos!!!",
+        "tiempo": "Hace 3 días"
+    },
+    {
+        "nombre":"Gonzalo Avalos",
+        "calificacion": "Excelente",
+        "comentario": "Lo mejor de Córdoba, no duden en visitar el bar!",
+        "tiempo": "Hace 3 días"
+    },
+    {
+        "nombre":"Lourdes Cejas",
+        "calificacion": "Muy bueno",
+        "comentario": "La pase increíble, volvería a ir mil veces",
+        "tiempo": "Hace 2 días"
+    },
+    {
+        "nombre":"Lucas Ventura",
+        "calificacion": "Excelente",
+        "comentario": "Definitivamente es un excelente bar para disfrutar con amigos",
+        "tiempo": "Hace 1 día"
+    }
+    
+    
+    
+]
