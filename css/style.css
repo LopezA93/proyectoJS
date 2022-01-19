@@ -7,104 +7,142 @@
   font-family: 'Roboto', sans-serif;
 }
 
-#header {
-  margin: 2rem;
-  text-align: center;
+body {
+  background-color: black;
 }
 
-#header h6 {
-  color: white;
+body #header {
+  text-align: start;
+  margin: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
 
-#header h3 {
-  color: lightgray;
-}
-
-#header a {
+body #header a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
-#header ul {
+body #header nav {
+  background-color: white;
+  width: 100%;
+}
+
+body #header nav ul {
   list-style-type: none;
-  margin: 2rem;
-  margin-left: 0px !important;
+  margin: 0 !important;
 }
 
-#header ul li {
+body #header nav ul .logo img {
+  width: 200px;
+}
+
+body #header nav ul li {
   display: inline-block;
   margin: 0.5rem 1rem;
-  color: white;
-  font-size: 1 rem;
+  color: black;
+  font-size: 1.5 rem;
 }
 
-#header ul a {
+body #header nav ul li:hover {
+  border-bottom: 1px solid black;
+}
+
+body #header nav ul a {
   position: relative;
 }
 
-#header ul a #iconoCarro {
+body #header nav ul a #iconoCarro {
   font-size: 1.5rem;
 }
 
-#header ul a #carrito {
+body #header nav ul a #carrito {
   border: 1px solid black;
   border-radius: 5px;
-  width: 350px;
+  width: 400px;
   height: 300px;
   z-index: 1;
   display: none;
   position: absolute;
-  left: 1rem;
+  right: 0;
+  scrollbar-width: none;
   background-color: lightblue;
   overflow: auto;
+  z-index: 20;
 }
 
-#header ul a #carrito h4 {
+body #header nav ul a #carrito h4 {
   margin-top: 1rem;
   color: black;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-#header ul a #carrito p {
+body #header nav ul a #carrito p {
   color: black;
 }
 
-#header ul a .items {
+body #header nav ul a .items {
   padding: 1rem;
+  text-align: center;
 }
 
-#header ul a .items .cantidadCarro {
+body #header nav ul a .items .cantidadCarro {
   font-size: 1rem;
   width: 3rem;
+  height: 2.3rem;
+  vertical-align: text-top;
 }
 
-#header ul a #botonesCarrito {
+body #header nav ul a .items label {
+  display: block;
+}
+
+body #header nav ul a #botonesCarrito {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-body {
-  background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/fondito1.jpg");
-  background-size: cover;
+body main #imagenBar {
+  padding-top: 100px;
 }
 
-body main img {
+body main #imagenBar img {
+  width: 100%;
   border-radius: 5px;
 }
 
-body main h2 {
+body main #operaciones {
+  margin: 1rem;
+}
+
+body main #operaciones .btn {
+  vertical-align: baseline !important;
+}
+
+body main #operaciones h2 {
   text-align: center;
   padding: 2rem;
-  color: white;
+  color: black;
 }
 
 body main #eleccion #formReserva {
   text-align: center;
-  color: white;
-  margin: 1rem 0;
+  color: black;
+  margin: 1rem;
+  padding: 0.2rem;
+}
+
+body main #eleccion #formReserva .form-control {
+  width: 25%;
+  text-align: center;
+  margin: 0.2rem auto;
 }
 
 body main #resultado p {
@@ -117,6 +155,20 @@ body main #resultado p {
 body main #resultado h3 {
   color: white;
   text-align: center;
+}
+
+body main #resultado #formCompra {
+  margin: 1rem;
+  text-align: center;
+}
+
+body main #resultado #formCompra label {
+  margin: 0.5rem 0;
+}
+
+body main #resultado #formCompra .form-control {
+  width: 25%;
+  margin: 0 auto;
 }
 
 body main #opiniones .divOpinion {
@@ -138,17 +190,20 @@ body main #opiniones .divOpinion p {
 }
 
 body main #opiniones #btnEnviarOpinion {
+  margin: 1rem;
   width: 25%;
 }
 
 body main #opiniones h4 {
-  color: white;
+  margin: 1rem;
+  color: black;
   text-align: center;
   font-size: 2rem;
 }
 
 body main #opiniones #formOpinion {
-  color: white;
+  margin: 1rem;
+  color: black;
 }
 
 body main #opiniones #formOpinion .form-control {
@@ -162,40 +217,91 @@ body main #opiniones #formOpinion .form-floating label {
 
 body main #servicios .row {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 body main #servicios .row h4 {
   font-size: 2rem;
+  margin: 1rem;
 }
 
-body main #servicios .row p {
-  font-size: 1rem;
+body main #servicios .row p, body main #servicios .row h6 {
+  font-size: 1.2rem;
+}
+
+body main #servicios .row ul li {
+  font-size: 1.2rem;
 }
 
 body main #servicios .row a {
   text-decoration: none;
   display: inline;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 body footer {
+  background: black;
   text-align: center;
-  padding: 2rem;
+  border-radius: 5px 5px 0px 0px;
 }
 
 body footer h4 {
+  padding: 2rem;
+  display: inline-block;
   font-size: 1rem;
   color: white;
 }
 
-body footer a {
-  color: white;
+body footer h4 a {
   text-decoration: none;
+  color: white;
 }
 
-body .btn {
-  vertical-align: baseline !important;
+body footer .footer__redes li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 2rem;
+}
+
+body footer .footer__redes li a {
+  color: white;
+}
+
+body footer .footer__redes .face i:hover {
+  color: #3b5998;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body footer .footer__redes .tw i:hover {
+  color: lightskyblue;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body footer .footer__redes .ws i:hover {
+  color: #4FCE5D;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body footer .footer__redes .correo i:hover {
+  color: blue;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body footer .footer__copyright p {
+  color: gray;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=style.css.map */

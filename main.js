@@ -25,6 +25,7 @@ const guardaLocal = (clave, valor) => {
 };
 
 /* Adherir DOM a variables*/
+let imgBar= $(`#imagenBar`);
 let divForm = $(`#operaciones`);
 let botonComprar = $(`#comprar`);
 let botonReservar = $(`#reservar`);
@@ -183,14 +184,17 @@ function pagarCarrito() {
 <input type="number" class="form-control" id="telefonoCompra" placeholder="Ingrese su teléfono" required>
 <label for="formControlInput" class="form-label">Dirección</label>
 <input  class="form-control"  placeholder="Ingrese su direccion">
-<button type="button" class="btn btn-primary mt-3" id="enviarCompra" onClick="compraExitosa()">Enviar</button>
+<button type="button" class="btn btn-primary mt-3" id="enviarCompra" onClick="compraExitosa()">Enviar pedido</button>
 </form>
     `
         divCarrito.hide()
-        $("#operaciones").remove();
-        $("#eleccion").remove();
+        $("#operaciones").hide();
+        $("#eleccion").hide();
+        $("#opiniones").hide();
+        $("#servicios").hide();
+        
         divResultado.innerHTML = formularioCompra;
-
+        $("#resultado").show();
 
     }
 
@@ -222,7 +226,9 @@ let renderLS = function () {
 
 botonComprar.click(() => {
     divForm.remove();
-    $("#eleccion").addClass("row")
+    
+    $("#eleccion").addClass("row");
+    
     productos.forEach((producto) => {
 
         $("#eleccion").prepend(` 
@@ -291,9 +297,8 @@ botonComprar.click(() => {
             agregarCarritoProducto();
             function agregarCarritoProducto() {
                 $("#itemsAgregados").prepend(`<div id="carritoProd${newItem.id}" class= "items"> 
-                     <img src="${newItem.img}" class="img-fluid w-25" </img> <p> ${newItem.bebida} $ <span id="precioCarro${newItem.id}">${newItem.precio}</span> <br>
-                     Cantidad</p>
-                     
+                     <img src="${newItem.img}" class="img-fluid w-25" </img> <p> ${newItem.bebida} $ <span id="precioCarro${newItem.id}">${newItem.precio}</span></p>
+                     <label for="cantidad">Cantidad</label>
                      <input  class="cantidadCarro" id="cantidad${newItem.id}" readonly  value=${newItem.cantidad}> 
                     <button type="button" class="btn btn-danger mt-3" id="quitarItem">x</button>
                     <button type="button" class="btn btn-success mt-3" id="sumarItem${newItem.id}">+</button>
@@ -365,9 +370,10 @@ function dibujarCarroLS() {
         carrito.forEach((producto) => {
 
             $("#itemsAgregados").prepend(`<div id="carritoProd${producto.id}" class= "items"> 
-                     <img src="${producto.img}" class="img-fluid w-25" </img> <p class="bebida"> ${producto.bebida} </p> $ <span id="precioCarro${producto.id}">${producto.precio}</span> <br>
-                     Cantidad
-                     
+                     <img src="${producto.img}" class="img-fluid w-25" </img> 
+                     <p class="bebida"> ${producto.bebida} </p> 
+                     <p>$ <span id="precioCarro${producto.id}">${producto.precio}</span> </p>
+                     <label for="cantidad">Cantidad</label>
                      <input  class="cantidadCarro" id="cantidad${producto.id}" readonly  value=${producto.cantidad}> 
                     <button type="button" class="btn btn-danger mt-3" id="quitarItem" >x</button>
                     <button type="button" class="btn btn-success mt-3" id="sumarItem">+</button>

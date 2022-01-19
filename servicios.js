@@ -1,9 +1,9 @@
 const servicios = $("#btnServicios");
 
 servicios.click(() => {
-    $("#resultado").remove();
-    $("#operaciones").remove();
-    $("#eleccion").remove();
+    $("#resultado").hide();
+    $("#operaciones").hide();
+    $("#eleccion").hide();
     $("#opiniones").hide();
     $("#servicios").show();
     DOMServicios();

@@ -9,75 +9,90 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/63551b8b33.js" crossorigin="anonymous"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
 </head>
 
-<body class="container mx-auto">
+<body class="container">
     <header id="header">
-        
-        <a href="index.html"><h1  > Puzzles Bar</h1></a>
-        <h3>El lugar donde todos encajamos</h3>
-        
         <nav>
             <ul>
-                <a href="index.html"><li>Home</li></a>
-                <a href="#" id="btnServicios"><li>Servicios</li></a>
-                <a href="#" id="btnOpiniones"><li>Opiniones</li></a>
-                <a href="https://wa.me/5493512405823" target="_blank"><li>Contacto</li></a>
-                <a href="#"><i class="fas fa-shopping-cart" id="iconoCarro"></i> <div id="carrito">
-                    
-                </div></a>
-                
+                <a class="logo" href="index.html"> <img  src="img/logo.png" alt="logo"></a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="#servicios" id="btnServicios">
+                    <li>Servicios</li>
+                </a>
+                <a href="#opiniones" id="btnOpiniones">
+                    <li>Opiniones</li>
+                </a>
+                <a href="https://wa.me/5493512405823" target="_blank">
+                    <li>Contacto</li>
+                </a>
+                <a href="#carrito"><i class="fas fa-shopping-cart" id="iconoCarro"></i>
+                    <div id="carrito">
+
+                    </div>
+                </a>
+
             </ul>
-            
+
         </nav>
     </header>
-    <main  id="container">
-        <section>
-            <!-- <img src="img/how-i-met-your-mother-serie-como-conoci-vuestra-madre-himym-2.jpg" alt="logo" width=100%> -->
+    <main id="container">
+        <section id="imagenBar">
+            <img src="img/how-i-met-your-mother-serie-como-conoci-vuestra-madre-himym-2.jpg" alt="">
         </section>
         <section id="operaciones">
             <h2> Elija que operacion quiere realizar </h2>
-            <div class="d-grid gap-2 col-6 mx-auto" id="contOperacion"  >
-                <button class="btn btn-primary" type="button" id="reservar" >Reservar</button>
-                <button class="btn btn-success" type="button" id="comprar" >Comprar bebidas</button>
-                
-              </div>
+            <div class="d-grid gap-2 col-6 mx-auto" id="contOperacion">
+                <button class="btn btn-primary" type="button" id="reservar">Reservar</button>
+                <button class="btn btn-success" type="button" id="comprar">Comprar bebidas</button>
 
+            </div>
+           
         </section>
         <div id="eleccion"></div>
         <div id="resultado"></div>
         <div id="opiniones" class="row"></div>
         <div id="servicios"></div>
-        
+
 
     </main>
-    <footer>
-        <div>
+    <footer class="row">
+        <div class="ubicacion col-6">
             <h4>
-                ¿Donde encontrarnos? <br>
-                Av. Achaval Rodriguez N° 123 - Cordoba Argentina <br>
-                TEL:0351-152405823
-            </h4>
-        </div>
-        <div>
-            <a href="https://www.facebook.com"target="_blank">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.google.com.ar/maps/place/Dr.+T.+Ach%C3%A1val+Rodr%C3%ADguez+1234,+X5000BKZ+C%C3%B3rdoba/@-31.4208043,-64.2066192,17z/data=!3m1!4b1!4m5!3m4!1s0x9432a27998b05b95:0x5263d9cbdee658da!8m2!3d-31.4208089!4d-64.2044305"
+                    target="_blank">¿Donde encontrarnos? <br>
+                    Av. Achaval Rodriguez N° 123 - Cordoba Argentina</a> <br>
+                            </h4>
         </div>
 
+        <div class="footer__redes col-6">
+            <li class="face"> <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="tw"> <a href="https://www.twitter.com" target="_blank"> <i class="fab fa-twitter"></i></a> </li>
+            <li class="ws"> <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="correo"> <a href="mailto:dr.lopezagustin1@gmail.com?Subject=Correo"><i
+                  class="far fa-envelope"></i></a></li>
+
+        </div>
+        <div class="row footer__copyright">
+            <p>Puzzles Bar, 2022 Copyright © Todos los Derechos Reservados ®.</p>
+      
+          </div>
 
     </footer>
-    
-    <script  defer src="main.js"></script>
+
+    <script defer src="main.js"></script>
     <script src="opiniones.js"></script>
     <script src="servicios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -86,7 +101,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-       
+
 </body>
 
 </html>

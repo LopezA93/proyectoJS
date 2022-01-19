@@ -11,9 +11,9 @@ $.ajax({
 
 
 btnOpiniones.click(() => {
-  $("#resultado").remove();
-  $("#operaciones").remove();
-  $("#eleccion").remove();
+  $("#resultado").hide();
+  $("#operaciones").hide();
+  $("#eleccion").hide();
   $("#servicios").hide();
   $("#opiniones").show();
   creamosDOMdeOpiniones()
