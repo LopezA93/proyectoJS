@@ -17,6 +17,7 @@ body #header {
   position: fixed;
   z-index: 10;
   width: 100%;
+  max-width: 1140px;
 }
 
 body #header a {
@@ -27,79 +28,77 @@ body #header a {
 body #header nav {
   background-color: white;
   width: 100%;
-}
-
-body #header nav ul {
   list-style-type: none;
   margin: 0 !important;
 }
 
-body #header nav ul .logo img {
+body #header nav .logo img {
   width: 200px;
 }
 
-body #header nav ul li {
+body #header nav li {
   display: inline-block;
   margin: 0.5rem 1rem;
   color: black;
   font-size: 1.5 rem;
 }
 
-body #header nav ul li:hover {
+body #header nav li:hover {
   border-bottom: 1px solid black;
 }
 
-body #header nav ul a {
+body #header nav a {
   position: relative;
 }
 
-body #header nav ul a #iconoCarro {
+body #header nav a #iconoCarro {
   font-size: 1.5rem;
 }
 
-body #header nav ul a #carrito {
+body #header nav a #carrito {
   border: 1px solid black;
   border-radius: 5px;
-  width: 400px;
+  width: 35%;
   height: 300px;
   z-index: 1;
   display: none;
-  position: absolute;
-  right: 0;
-  scrollbar-width: none;
-  background-color: lightblue;
+  position: fixed;
+  right: 3%;
+  top: 13.5%;
+  scrollbar-width: auto;
+  background-color: #939ea1;
   overflow: auto;
   z-index: 20;
 }
 
-body #header nav ul a #carrito h4 {
+body #header nav a #carrito h4 {
   margin-top: 1rem;
   color: black;
   text-align: center;
   font-size: 1.5rem;
 }
 
-body #header nav ul a #carrito p {
+body #header nav a #carrito p {
   color: black;
 }
 
-body #header nav ul a .items {
+body #header nav a .items {
   padding: 1rem;
   text-align: center;
 }
 
-body #header nav ul a .items .cantidadCarro {
+body #header nav a .items .cantidadCarro {
   font-size: 1rem;
   width: 3rem;
   height: 2.3rem;
   vertical-align: text-top;
 }
 
-body #header nav ul a .items label {
+body #header nav a .items label {
   display: block;
 }
 
-body #header nav ul a #botonesCarrito {
+body #header nav a #botonesCarrito {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
@@ -146,15 +145,17 @@ body main #eleccion #formReserva .form-control {
 }
 
 body main #resultado p {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 2rem;
-  margin-top: 1rem;
+  margin: 2rem;
 }
 
 body main #resultado h3 {
-  color: white;
+  color: black;
   text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
 }
 
 body main #resultado #formCompra {
@@ -202,17 +203,24 @@ body main #opiniones h4 {
 }
 
 body main #opiniones #formOpinion {
+  text-align: center;
   margin: 1rem;
   color: black;
 }
 
+body main #opiniones #formOpinion input {
+  margin: 0 auto;
+  float: none !important;
+}
+
 body main #opiniones #formOpinion .form-control {
   width: 40%;
-  margin-bottom: 1rem;
+  margin: 0.3rem auto;
 }
 
 body main #opiniones #formOpinion .form-floating label {
   color: gray;
+  text-align: center;
 }
 
 body main #servicios .row {
@@ -303,5 +311,36 @@ body footer .footer__redes .correo i:hover {
 body footer .footer__copyright p {
   color: gray;
   font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: auto !important;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header ul .logo img {
+    width: 250px;
+    display: block;
+  }
+  header ul a {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  header #carrito {
+    width: 60% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

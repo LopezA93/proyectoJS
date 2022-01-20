@@ -27,7 +27,7 @@
     },
     {
         "id": 5,
-        "tipoBebida": "Champang Trumpeter",
+        "tipoBebida": "Champagne Trumpeter",
         "precio": 1000,
         "img": "./img/bebidas/champagne.jpg"
     },

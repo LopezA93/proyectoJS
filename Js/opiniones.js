@@ -77,9 +77,9 @@ function enviarOpinion() {
 <label for="formControlInput" class="form-label">Ingrese su correo electronico</label>
 <input type="email" class="form-control" i placeholder="Ingrese su e-mail" required>
 
-<div class="form-floating">
+<div >
   <textarea id= "comentariosForm"class="form-control" required placeholder="Deje su comentario aquí" id="floatingTextarea" style="height: 100px"></textarea>
-  <label for="floatingTextarea">Comentarios</label>
+  
 </div>
 <button type="submit" class="btn btn-primary mt-3" id="enviarOpinion" onClick="enviarForm()">Enviar</button>
 </form>`

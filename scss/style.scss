@@ -19,6 +19,7 @@ body {
         position: fixed;
         z-index: 10;
         width: 100%;
+        max-width: 1140px;
         
         
         
@@ -31,14 +32,9 @@ body {
             background-color: white;
             
             width: 100%;
-            
-            
-            
-            ul {
-               
-                list-style-type: none;
+             list-style-type: none;
                 
-                margin: 0 !important;
+             margin: 0 !important;
                 .logo {
                     img {
                         width: 200px;
@@ -64,15 +60,16 @@ body {
                     #carrito {
                     border: 1px solid black;
                     border-radius: 5px;
-                    width: 400px;
+                    width: 35%;
                     height: 300px;
                     z-index: 1;
                     display:none;
-                    position:absolute;
-                    right: 0;
-                    scrollbar-width:none;
+                    position:fixed;
+                    right: 3%;
+                    top:13.5%;
+                    scrollbar-width:auto;
                     
-                    background-color: lightblue;
+                    background-color: rgb(147, 158, 161);
                     overflow: auto;
                    
                     z-index: 20;
@@ -115,7 +112,7 @@ body {
                 
                 }
             
-            }
+            
            
         } 
     }
@@ -165,14 +162,16 @@ body {
         }
         #resultado {
             p {
-                color: white;
+                color: black;
                 text-align: center;
                 font-size: 2rem;
-                margin-top: 1rem;
+                margin: 2rem;
             }
             h3 {
-                color: white;
+                color: black;
                 text-align: center;
+                font-size: 2rem;
+                margin: 2rem;
             }
             #formCompra {
                 margin: 1rem;
@@ -214,15 +213,21 @@ body {
                 font-size: 2rem;
             }
             #formOpinion {
+                text-align: center;
                 margin: 1rem;
                 color: black;
+                input {
+                    margin: 0 auto;
+                    float: none !important;
+                }
                 .form-control {
                     width: 40%;
-                    margin-bottom: 1rem;
+                    margin: 0.3rem auto;
                 }
                 .form-floating{
                     label {
                         color: gray;
+                        text-align: center;
                     }
                 }
             }
@@ -318,4 +323,33 @@ body {
     
 
 }
-
+@media (max-width:768px) {
+    header {
+        width: auto !important;
+        
+        ul {
+            .logo {
+                img{
+                    width: 250px;
+                    display: block;
+                }
+            }
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            a{
+                align-content: center;
+                
+            }
+            
+        }
+        
+        #carrito {
+            width: 60% !important;
+            
+        }
+    }
+    
+    
+}
