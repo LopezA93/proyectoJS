@@ -1,7 +1,7 @@
 /* Array productos */
 let productos = [];
 $.ajax({
-    url: "./productos.json",
+    url: "./Json/productos.json",
     dataType: "json",
     success: (respuesta) => {
         productos = respuesta;
@@ -297,20 +297,24 @@ botonComprar.click(() => {
             agregarCarritoProducto();
             function agregarCarritoProducto() {
                 $("#itemsAgregados").prepend(`<div id="carritoProd${newItem.id}" class= "items"> 
-                     <img src="${newItem.img}" class="img-fluid w-25" </img> <p> ${newItem.bebida} $ <span id="precioCarro${newItem.id}">${newItem.precio}</span></p>
+                     <img src="${newItem.img}" class="img-fluid w-25" </img> 
+                     <p class="bebida"> ${newItem.bebida}</p>
+                     <p> $ <span id="precioCarro${newItem.id}">${newItem.precio}</span></p>
                      <label for="cantidad">Cantidad</label>
-                     <input  class="cantidadCarro" id="cantidad${newItem.id}" readonly  value=${newItem.cantidad}> 
+                     <input  class="cantidadCarro" id="cantidad${newItem.id}" readonly  value=${newItem.cantidad}>
+                    <button type="button" class="btn btn-success mt-3" id="sumarItem">+</button>
+                    <button type="button" class="btn btn-secondary mt-3" id="restarItem">-</button>
                     <button type="button" class="btn btn-danger mt-3" id="quitarItem">x</button>
-                    <button type="button" class="btn btn-success mt-3" id="sumarItem${newItem.id}">+</button>
                               
                     </div>`);
 
                 eliminarItemCarro();
+                restarItem();
 
 
             }
             /* cambiamos la cantidad del carrito */
-            $(`#sumarItem${newItem.id}`).click(() => {
+            $(`#sumarItem`).click(() => {
 
                 for (i = 0; i < carrito.length; i++) {
                     if (carrito[i].id == newItem.id) {
@@ -326,7 +330,23 @@ botonComprar.click(() => {
                 }
             })
 
-
+            function restarItem () {
+                $("#restarItem").click(()=> {
+                    for (i = 0; i < carrito.length; i++) {
+                        if (carrito[i].id == newItem.id) {
+                            if(carrito[i].cantidad>1){
+                            carrito[i].cantidad--;
+                            let inputCantidadval = document.getElementById(`cantidad${newItem.id}`);
+                            inputCantidadval.value--;
+                            console.log(carrito);
+                            renderLS();
+                            calcularTotal()
+    
+                            return null;}
+                        }
+                    }
+                })
+            }
             /* Quitamos item del carro*/
             function eliminarItemCarro() {
                 $(`#quitarItem`).click(() => {
@@ -375,13 +395,16 @@ function dibujarCarroLS() {
                      <p>$ <span id="precioCarro${producto.id}">${producto.precio}</span> </p>
                      <label for="cantidad">Cantidad</label>
                      <input  class="cantidadCarro" id="cantidad${producto.id}" readonly  value=${producto.cantidad}> 
-                    <button type="button" class="btn btn-danger mt-3" id="quitarItem" >x</button>
+                    
                     <button type="button" class="btn btn-success mt-3" id="sumarItem">+</button>
+                    <button type="button" class="btn btn-secondary mt-3" id="restarItem">-</button>
+                    <button type="button" class="btn btn-danger mt-3" id="quitarItem" >x</button>
                               
                     </div>
                     `)
                     eliminarItemCarroLS (producto);
                     sumarItemCarroLS(producto);
+                    restarItem(producto);
                     calcularTotal();
                     
                 }
@@ -436,6 +459,24 @@ function sumarItemCarroLS(producto) {
         }
     })
     
+}
+function restarItem (producto) {
+    $("#restarItem").click((e)=> {
+        e.target
+        for (i = 0; i < carrito.length; i++) {
+            if (carrito[i].id == producto.id) {
+                if(carrito[i].cantidad>1){
+                carrito[i].cantidad--;
+                let inputCantidadval = document.getElementById(`cantidad${producto.id}`);
+                inputCantidadval.value--;
+                console.log(carrito);
+                renderLS();
+                calcularTotal()
+
+                return null;}
+            }
+        }
+    })
 }
     
 dibujarCarroLS();
