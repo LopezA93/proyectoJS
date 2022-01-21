@@ -1,7 +1,7 @@
 const btnOpiniones = $("#btnOpiniones");
 let opiniones = [];
 $.ajax({
-  url: "./Json/opinionesClientes.json",
+  url: "Json/opinionesClientes.json",
   dataType: "json",
   success: (respuesta) => {
     opiniones = respuesta;
