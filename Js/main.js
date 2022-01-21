@@ -1,7 +1,7 @@
 /* Array productos */
 let productos = [];
 $.ajax({
-    url: "./Json/productos.json",
+    url: "Json/productos.json",
     dataType: "json",
     success: (respuesta) => {
         productos = respuesta;
